@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasos eats</title>
+    <link rel="stylesheet" href="practise.css">
+    <style>
+        /* Add inside practise.css */
+        .reveal { opacity:0; transform:translateY(25px); transition:600ms cubic-bezier(.4,0,.2,1); }
+        .reveal.visible { opacity:1; transform:none; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <figure>
+                <svg width="120" height="120" viewBox="0 0 120 120" role="img" aria-labelledby="logoTitle logoDesc" xmlns="http://www.w3.org/2000/svg">
+                    <title id="logoTitle">Fasos Eats logo</title>
+                    <desc id="logoDesc">Minimal circular plate with a fork on the left and a spoon on the right curving around the rim, suggesting fresh modern dining</desc>
+                    <circle cx="60" cy="60" r="54" fill="#fff" stroke="#333" stroke-width="4"/>
+                    <circle cx="60" cy="60" r="28" fill="none" stroke="#333" stroke-width="3" stroke-dasharray="4 6"/>
+                    <g fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M32 28 v28"/>
+                        <path d="M26 28 v20"/>
+                        <path d="M38 28 v20"/>
+                        <path d="M26 28 h12"/>
+                        <path d="M88 28 c6 0 10 6 10 12 0 7-4 12-10 12 -6 0-10-5-10-12 0-6 4-12 10-12z"/>
+                        <path d="M88 52 v24"/>
+                    </g>
+                </svg>
+                <figcaption class="visually-hidden">Fasos eats</figcaption>
+            </figure>
+            <div>
+              <h1 class="site-title">Fasos Eats</h1>
+              <p class="tagline">Fresh. Fast. Flavorful.</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="primary-navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#place-your-order">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="reveal">
+            <h2>About Us</h2>
+            <p>Fasos Eats is a modern dining experience that brings fresh flavors to your table.</p>
+        </section>
+        <section id="menu" class="reveal">
+            <h2>Our Menu</h2>
+            <article class="reveal">
+                <img src="./images/appetizers.jpg" alt="Colorful platter of assorted fresh appetizers" loading="lazy" width="320" height="200">
+                <h3>Appetizer Sampler</h3>
+                <p>A vibrant mix of crispy bites, seasonal veggies, and zesty dips to start your meal right.</p>
+            </article>
+            <article class="reveal">
+                <img src="./images/signature-mains.jpg" alt="Plated gourmet entrée with grilled protein and roasted vegetables" loading="lazy" width="320" height="200">
+                <h3>Signature Mains</h3>
+                <p>Hearty chef-crafted dishes featuring responsibly sourced proteins and bold global flavors.</p>
+            </article>
+            <article class="reveal">
+                <img src="./images/desserts.jpg" alt="Assortment of elegant plated desserts including cake and fruit tart" loading="lazy" width="320" height="200">
+                <h3>Decadent Desserts</h3>
+                <p>Indulge in artisan sweets that balance rich textures with bright, delicate finishes.</p>
+            </article>
+        </section>
+        <section id="place-your-order" class="reveal">
+            <h2>Place Your Order</h2>
+            <form action="#" method="post" id="order-form" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="^[0-9+\-\s()]{7,}$">
+                
+                <label for="order-details">Order Details:</label>
+                <textarea id="order-details" name="order-details" rows="4" required></textarea>
+                
+                <button type="submit">Submit Order</button>
+                <p id="form-status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>made with &#10084; by Fasos Eats</p>
+        <p>&copy; 2024 Fasos Eats. All rights reserved.</p>
+    </footer>
+    <script src="practise.js" defer></script>
+</body>
+</html>
